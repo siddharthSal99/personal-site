@@ -32,6 +32,25 @@ main {
   width: 100%;
   max-width: 32rem;
   text-align: center;
+  animation: fade-slide-in 0.5s ease-out both;
+}
+
+@keyframes fade-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main,
+  .link-card {
+    animation: none !important;
+  }
 }
 
 h1 {
@@ -39,9 +58,24 @@ h1 {
   margin: 0 0 0.5rem;
 }
 
+.accent-line {
+  width: 3rem;
+  height: 3px;
+  margin: 0.75rem auto 1.25rem;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
 .tagline {
   color: var(--muted);
   margin: 0 0 2.5rem;
+}
+
+.bio {
+  color: var(--fg);
+  max-width: 26rem;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
 }
 
 .links {
@@ -61,7 +95,16 @@ h1 {
   text-decoration: none;
   font-weight: 500;
   transition: border-color 0.15s ease, transform 0.15s ease;
+  opacity: 0;
+  animation: fade-slide-in 0.4s ease-out both;
 }
+
+.links .link-card:nth-child(1) { animation-delay: 0.1s; }
+.links .link-card:nth-child(2) { animation-delay: 0.15s; }
+.links .link-card:nth-child(3) { animation-delay: 0.2s; }
+.links .link-card:nth-child(4) { animation-delay: 0.25s; }
+.links .link-card:nth-child(5) { animation-delay: 0.3s; }
+.links .link-card:nth-child(6) { animation-delay: 0.35s; }
 
 .link-card:hover {
   border-color: var(--accent);
