@@ -48,8 +48,7 @@ main {
 
 @media (prefers-reduced-motion: reduce) {
   main,
-  .link-card,
-  .gallery-item {
+  .link-card {
     animation: none !important;
   }
 }
@@ -79,42 +78,6 @@ h1 {
   line-height: 1.6;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.6rem;
-  margin-bottom: 2rem;
-}
-
-.gallery-item {
-  display: block;
-  aspect-ratio: 1;
-  overflow: hidden;
-  border-radius: 0.75rem;
-  border: 1px solid var(--border);
-  opacity: 0;
-  animation: fade-slide-in 0.4s ease-out both;
-  transition: border-color 0.15s ease, transform 0.15s ease;
-}
-
-.gallery-item:hover {
-  border-color: var(--accent);
-  transform: translateY(-2px);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.gallery .gallery-item:nth-child(1) { animation-delay: 0.05s; }
-.gallery .gallery-item:nth-child(2) { animation-delay: 0.1s; }
-.gallery .gallery-item:nth-child(3) { animation-delay: 0.15s; }
-.gallery .gallery-item:nth-child(4) { animation-delay: 0.2s; }
-.gallery .gallery-item:nth-child(5) { animation-delay: 0.25s; }
-
 .links {
   display: grid;
   gap: 0.75rem;
@@ -136,12 +99,12 @@ h1 {
   animation: fade-slide-in 0.4s ease-out both;
 }
 
-.links .link-card:nth-child(1) { animation-delay: 0.3s; }
-.links .link-card:nth-child(2) { animation-delay: 0.35s; }
-.links .link-card:nth-child(3) { animation-delay: 0.4s; }
-.links .link-card:nth-child(4) { animation-delay: 0.45s; }
-.links .link-card:nth-child(5) { animation-delay: 0.5s; }
-.links .link-card:nth-child(6) { animation-delay: 0.55s; }
+.links .link-card:nth-child(1) { animation-delay: 0.1s; }
+.links .link-card:nth-child(2) { animation-delay: 0.15s; }
+.links .link-card:nth-child(3) { animation-delay: 0.2s; }
+.links .link-card:nth-child(4) { animation-delay: 0.25s; }
+.links .link-card:nth-child(5) { animation-delay: 0.3s; }
+.links .link-card:nth-child(6) { animation-delay: 0.35s; }
 
 .link-card:hover {
   border-color: var(--accent);
@@ -168,24 +131,6 @@ footer {
 
 footer a {
   color: inherit;
-}
-
-.art-page {
-  max-width: 40rem;
-}
-
-.full-gallery {
-  display: grid;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.full-gallery img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 0.75rem;
-  border: 1px solid var(--border);
 }
 
 .back-link {
