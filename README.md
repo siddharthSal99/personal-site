@@ -1,11 +1,10 @@
 # personal-site
 
-A simple personal landing page with links to GitHub, LinkedIn, a blog, and Instagram.
+A simple personal landing page with a Projects showcase (Color Grading Helper, Watch Visualizer) and links to GitHub, LinkedIn, and Instagram.
 
 ## Structure
 
-- `index.html` — landing page with links
-- `blog.html` — placeholder blog page
+- `index.html` — landing page with a Projects section and profile links
 - `styles.css` — shared styles
 
 ## Usage

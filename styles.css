@@ -48,7 +48,8 @@ main {
 
 @media (prefers-reduced-motion: reduce) {
   main,
-  .link-card {
+  .link-card,
+  .project-card {
     animation: none !important;
   }
 }
@@ -78,6 +79,58 @@ h1 {
   line-height: 1.6;
 }
 
+.projects {
+  margin-bottom: 2rem;
+}
+
+.projects h2 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+}
+
+.project-list {
+  display: grid;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.project-card {
+  display: block;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--card-bg);
+  color: var(--fg);
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+  opacity: 0;
+  animation: fade-slide-in 0.4s ease-out both;
+}
+
+.project-list .project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-list .project-card:nth-child(2) { animation-delay: 0.15s; }
+
+.project-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.project-card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+.project-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
 .links {
   display: grid;
   gap: 0.75rem;
@@ -99,10 +152,9 @@ h1 {
   animation: fade-slide-in 0.4s ease-out both;
 }
 
-.links .link-card:nth-child(1) { animation-delay: 0.1s; }
-.links .link-card:nth-child(2) { animation-delay: 0.15s; }
-.links .link-card:nth-child(3) { animation-delay: 0.2s; }
-.links .link-card:nth-child(4) { animation-delay: 0.25s; }
+.links .link-card:nth-child(1) { animation-delay: 0.2s; }
+.links .link-card:nth-child(2) { animation-delay: 0.25s; }
+.links .link-card:nth-child(3) { animation-delay: 0.3s; }
 
 .link-card:hover {
   border-color: var(--accent);
